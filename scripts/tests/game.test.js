@@ -12,7 +12,7 @@ beforeAll(() => {
     document.open();
     document.write(fileContents);
     document.close();
-});
+}); 
 /* good to remember that this code above will be the same for every HTML  
 file that you want to load into the DOM. You might just need to change the filename */
 
@@ -42,6 +42,15 @@ describe("game object contains correct keys", () => {
     });
     test("turnNumber key exists", () => {
         expect("turnNumber" in game).toBe(true);
+    });
+    test("lastButton key exists", () => {
+        expect("lastButton" in game).toBe(true);
+    });
+    test("turnInProgress key exists", () => {
+        expect("turnInProgress" in game).toBe(true);
+    });
+    test("turnInProgress key value is false", () => {
+        expect("turnInProgress" in game).toBe(true);
     });
 });
 
